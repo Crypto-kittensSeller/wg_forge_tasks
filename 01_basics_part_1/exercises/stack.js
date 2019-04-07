@@ -32,8 +32,7 @@ export default class Stack {
    */
 
   pop() {
-    const value = this.list[this.length - 1];
-    this.list.length--;
+    const value = this.list.pop();
     this.length--;
     return value;
   }

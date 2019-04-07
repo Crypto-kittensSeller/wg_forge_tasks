@@ -31,8 +31,7 @@ export default class Queue {
    */
 
   dequeue() {
-    const value = this.list[this.length - 1];
-    this.list.length--;
+    const value = this.list.pop();
     this.length--;
     return value;
   }
