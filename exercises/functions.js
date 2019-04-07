@@ -44,12 +44,13 @@ gen() -> 5
 ...
 */
 export function fibGenerator() {
+  let a = 0;
+  let b = 1;
   return function generator() {
-  let a = fibGenerator.a || 0;
-  let b = fibGenerator.b || 1;
-  fibGenerator.a = b;
-  fibGenerator.b = a + b;
-  return a;
+  const result = a;
+  a = b;
+  b = result + b;
+  return result;
   }
 }
 
